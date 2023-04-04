@@ -84,4 +84,10 @@ void Graphics::DrawCircle(int c_x, int c_y, int radius)
     }
 }
 
+void Graphics::DrawLine(Vec2<float>& startPoint, Vec2<float>& endPoint, uint32_t color)
+{
+    SDL_SetRenderDrawColor(renderer, color >> 24, color >> 16, color >> 8, color);
+    SDL_RenderDrawLine(renderer, startPoint.xPos, startPoint.yPos, endPoint.xPos, endPoint.yPos);
+}
+    
 

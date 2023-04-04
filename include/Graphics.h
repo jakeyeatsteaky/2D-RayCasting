@@ -28,6 +28,7 @@ struct Graphics
     static void DrawRect(const SDL_Rect& rect, uint32_t color);
     static void DrawPoints(std::vector<Vec2<int>*> points, uint32_t color);
     static void DrawCircle(int c_x, int c_y, int radius);
+    static void DrawLine(Vec2<float>& startPoint, Vec2<float>& endPoint, uint32_t color);
 };
 
 

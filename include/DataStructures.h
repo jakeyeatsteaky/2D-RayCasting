@@ -91,6 +91,19 @@ public:
     ~Vec2() {}
     T xPos;
     T yPos;
+    Vec2& operator *= (const Vec2& other) {
+        this->xPos = this->xPos * other.xPos;
+        this->yPos = this->yPos * other.yPos;
+        return this;
+    }
+    Vec2 operator * (const Vec3& other) {
+        return Vec2(this->xPos*other.xPos, this->yPos*other.yPos);
+    }
+    Vec3& operator += (const Vec3& other) {
+        this->xPos += other.xPos;
+        this->yPos += other.yPos;
+        return this;
+    }
 };
 
 struct Plane
@@ -204,8 +217,8 @@ public:
 
     Vec3 getRow(int index) {return data[index];}
 
-private:
     std::array<Vec3, 3> data;
+private:
 };
 
 class Vec4

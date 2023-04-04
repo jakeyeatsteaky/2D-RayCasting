@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <cmath>
 #include <cassert>
 
 #include "util.h"
@@ -235,3 +236,44 @@ bool rectIntersection(SDL_Rect& rect1, SDL_Rect& rect2)
                  rect1.y + rect1.h < rect2.y);
 }
 
+
+Vec3 rotateVector(Vec3& vec, float angleRad, eAxis axisOfRotation)
+{
+    // Mat3 rotationMatrix;
+    // switch(axisOfRotation)
+    // {
+    //     case eAxis_x:
+    //         Vec3 row0(1,0,0);
+    //         Vec3 row1(0, cos(angleRad), sin(angleRad));
+    //         Vec3 row2(0, sin(angleRad)*-1, cos(angleRad));
+    //         rotationMatrix.data.push_back(row0);
+    //         rotationMatrix.data.push_back(row1);
+    //         rotationMatrix.data.push_back(row2);
+    //         break;
+    //     case eAxis_y:
+    //         Vec3 row0(cos(angleRad),0,sin(angleRad)*-1);
+    //         Vec3 row1(0, 1, 0);
+    //         Vec3 row2(sin(angleRad), 0, cos(angleRad));
+    //         rotationMatrix.data.push_back(row0);
+    //         rotationMatrix.data.push_back(row1);
+    //         rotationMatrix.data.push_back(row2);
+    //         break;
+    //     case eAxis_z:
+    //         Vec3 row0(cos(angleRad), sin(angleRad), 0);
+    //         Vec3 row1(sin(angleRad)*-1, cos(angleRad), 0);
+    //         Vec3 row2(0,0,1);
+    //         rotationMatrix.data.push_back(row0);
+    //         rotationMatrix.data.push_back(row1);
+    //         rotationMatrix.data.push_back(row2);
+    //         break;
+    // }
+
+    // return vec*rotationMatrix;
+}
+
+void rotate(Obstacle* obstacle)
+{
+    
+
+    //obstacle->
+}

@@ -6,6 +6,14 @@
 #include "SDL.h"
 
 #include "DataStructures.h"
+#include "Obstacle.h"
+
+enum eAxis
+{
+    eAxis_x,
+    eAxis_y,
+    eAxis_z
+};
 
 std::vector<Vec3*> vecGen(std::vector<float>& comp);
 
@@ -39,5 +47,9 @@ int GenerateRandom(int start, int range);
 void SeedRandom();
 
 bool rectIntersection(SDL_Rect& rect1, SDL_Rect& rect2);
+
+Vec3 rotateVector(Vec3& vec, float angleRad, eAxis axisOfRotation);
+
+void rotate(Obstacle* obstacle);
 
 #endif
